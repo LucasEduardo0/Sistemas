@@ -12,9 +12,9 @@ import javax.swing.JTextField;
 
 public class CadastrarProdutos {
 
-	public static void main(String[] args) {
+	public CadastrarProdutos() {
 
-		//JLabel
+		//JFrame
 		JFrame cadastrarProdutos = new JFrame("Cadastrar Produtos");
 		cadastrarProdutos.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		cadastrarProdutos.setSize(500, 420);
@@ -31,7 +31,9 @@ public class CadastrarProdutos {
 		JTextField valorProdutoResposta = new JTextField();
 		valorProdutoResposta.setBounds(220, 40, 200, 20);
 		JButton botao = new JButton("Cadastrar");
-		botao.setBounds(180, 110, 150, 30);
+		botao.setBounds(180, 90, 150, 30);
+		JButton sair = new JButton("Sair");
+		sair.setBounds(180, 120, 150, 30);
 		
 		//Intanciar um objeto da classe ação
 		Acao a = new Acao();
@@ -69,12 +71,28 @@ public class CadastrarProdutos {
 			}
 		});
 		
+		//Ação botão sair
+		sair.addActionListener(new ActionListener() {
+			
+			@Override
+			public void actionPerformed(ActionEvent e) {
+
+				// Fechar formulário atual
+				cadastrarProdutos.dispose();
+				
+				//Chamar Principal
+				Principal p = new Principal();
+				
+			}
+		});
+		
 		//Add ao JFrame
 		cadastrarProdutos.add(nomeProduto);
 		cadastrarProdutos.add(valorProduto);
 		cadastrarProdutos.add(nomeProdutoResposta);
 		cadastrarProdutos.add(valorProdutoResposta);
 		cadastrarProdutos.add(botao);
+		cadastrarProdutos.add(sair);
 		cadastrarProdutos.add(barra);
 		
 		//Tornar visivel

@@ -1,5 +1,6 @@
 package exercicio01;
 
+import java.time.LocalDate;
 import java.time.LocalDateTime;
 import java.util.ArrayList;
 
@@ -9,8 +10,9 @@ public class ProdutoPedido {
 	private String nomeCliente;
 	private String nomeProduto;
 	private int quantidade;
-	private String horas;
-	
+	private int horas;
+	private int data;
+		
 	//ArrayList
 	public static ArrayList<ProdutoPedido> dados2 = new ArrayList<>();
 	
@@ -23,6 +25,9 @@ public class ProdutoPedido {
 	}
 	
 	public String getNomeProduto(){
+		
+		RealizarPedidos rp = new RealizarPedidos();
+		
 		return nomeProduto;
 	}
 	public void setNomeProduto(String nomeProduto){
@@ -36,21 +41,17 @@ public class ProdutoPedido {
 		this.quantidade = quantidade;
 	}
 	
-	public String getHora(){
-		
-		LocalDateTime tempo = LocalDateTime.now();
-		
-		int segundo = tempo.getSecond();
-		int minuto = tempo.getMinute();
-		int hora = tempo.getHour();
-		
-		horas = hora+":"+minuto+":"+segundo;
-		
+	public int getHora(){
 		return horas;
-		
 	}
 	public void setHora(int horas){
-		this.horas = Integer.toString(horas);
+		this.horas = horas;
+	}
+	
+	public int getData(){
+		return data;
+	}public void setData(int data){
+		this.data = data;
 	}
 
 }
