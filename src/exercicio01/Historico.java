@@ -9,19 +9,19 @@ import javax.swing.JScrollPane;
 import javax.swing.JTable;
 
 public class Historico {
-
+	
 	public Historico() {
 		
 		//JFrame
 		JFrame historico = new JFrame("Histórico");
 		historico.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-		historico.setSize(1000, 500);
+		historico.setSize(800, 650);
 		historico.setLocationRelativeTo(null);
 		historico.setLayout(null);
 		
 		//JButton
 		JButton sair = new JButton("Sair");
-		sair.setBounds(420, 400, 150, 30);
+		sair.setBounds(320, 550, 150, 30);
 		
 		//Instanciar
 		Acao a = new Acao();
@@ -31,7 +31,7 @@ public class Historico {
 		
 		//JScrollPane
 		JScrollPane barra = new JScrollPane(tabela);
-		barra.setBounds(50, 30, 890, 350);
+		barra.setBounds(20, 20, 750, 500);
 		
 		//Ação botão
 		sair.addActionListener(new ActionListener() {
@@ -39,11 +39,11 @@ public class Historico {
 			@Override
 			public void actionPerformed(ActionEvent e) {
 
-				// Fechar formulário atual
+				//Fechar formulario
 				historico.dispose();
 				
-				//Voltar para Principal
-				Principal p = new Principal();
+				//Chamar formulario
+				FormularioPrincipal fp = new FormularioPrincipal();
 				
 			}
 		});
@@ -55,8 +55,6 @@ public class Historico {
 		//Visivel
 		historico.setVisible(true);
 		
-		
 	}
-	
 
 }

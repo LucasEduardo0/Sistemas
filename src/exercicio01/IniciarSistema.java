@@ -4,8 +4,7 @@ public class IniciarSistema {
 
 	public static void main(String[] args) {
 
-		//Instanciar
-		Principal p = new Principal();
+		FormularioPrincipal p = new FormularioPrincipal();
 		
 	}
 
