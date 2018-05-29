@@ -68,7 +68,18 @@ public class FormularioPrincipal {
 					principal.dispose();
 					
 					//Chamar formulario
-					Estatisticas e = new Estatisticas();
+					Estatistica e = new Estatistica
+							
+							
+							
+							
+							
+							
+							
+							
+							
+							
+							();
 					e.setVisible(true);
 					
 				}

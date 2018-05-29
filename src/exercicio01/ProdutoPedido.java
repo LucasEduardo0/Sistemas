@@ -54,5 +54,21 @@ public class ProdutoPedido {
 	public void setData(String data) {
 		this.data = data;
 	}
+	
+	//Método para exibir o valor no combobox
+	public String toString() {
+		return nomeCliente;
+	}
 
 }
+
+
+
+
+
+
+
+
+
+
+
